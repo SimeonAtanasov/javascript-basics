@@ -7,4 +7,4 @@ function numberInRange(num) {
     }
 }
 
-numberInRange("-25", "0", "25")
+numberInRange("-25", "0", "25");
