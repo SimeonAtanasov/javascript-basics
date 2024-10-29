@@ -7,4 +7,4 @@ function TailoringWorkshop(countTable, LengthTable, widthTable) {
     console.log(`${priceBGN.toFixed(2)} BGN`)
 }
 
-TailoringWorkshop(5, 1.00, 0.50)
+TailoringWorkshop(5, 1.00, 0.50);

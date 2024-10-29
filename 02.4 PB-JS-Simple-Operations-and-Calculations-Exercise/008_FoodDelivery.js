@@ -12,4 +12,4 @@ function FoodDelivery(ChickenMenuCount, FishMenuCount, VegeterianMenuCount) {
     console.log(TotalDelivery)
 }
 
-FoodDelivery(2, 4, 3)
+FoodDelivery(2, 4, 3);

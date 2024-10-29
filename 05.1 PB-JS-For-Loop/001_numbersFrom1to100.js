@@ -4,6 +4,4 @@ function numberFrom1to100() {
     }
 }
 
-numberFrom1to100(
-    []
-)
+numberFrom1to100([]);

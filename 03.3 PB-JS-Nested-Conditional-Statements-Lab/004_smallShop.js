@@ -43,8 +43,8 @@ function smallShop(product, town, quantity) {
     }
 }
 
-smallShop("coffee", "Varna", "2")
-smallShop("peanuts", "Plovdiv", "1")
-smallShop("beer", "Sofia", "6")
-smallShop("water", "Plovdiv", "3")
-smallShop("sweets", "Sofia", "2.23")
+smallShop("coffee", "Varna", "2");
+smallShop("peanuts", "Plovdiv", "1");
+smallShop("beer", "Sofia", "6");
+smallShop("water", "Plovdiv", "3");
+smallShop("sweets", "Sofia", "2.23");

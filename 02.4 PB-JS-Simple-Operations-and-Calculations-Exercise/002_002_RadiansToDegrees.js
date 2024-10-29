@@ -4,4 +4,4 @@ function RadiansToDegrees(radian) {
     console.log(degrees);
 }
 
-RadiansToDegrees(3.1416)
+RadiansToDegrees(3.1416);

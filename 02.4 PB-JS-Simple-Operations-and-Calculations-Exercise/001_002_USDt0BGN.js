@@ -3,4 +3,4 @@ function USDtoBGN(usd) {
     console.log(convertUsdToBgn);
 }
 
-USDtoBGN("22")
+USDtoBGN("22");

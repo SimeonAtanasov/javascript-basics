@@ -11,4 +11,4 @@ function nums1To10() {
     console.log(10)
 }
 
-nums1To10()
+nums1To10();

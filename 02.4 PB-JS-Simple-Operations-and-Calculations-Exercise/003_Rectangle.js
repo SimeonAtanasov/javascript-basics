@@ -13,4 +13,4 @@ function rectangle(x1, y1, x2, y2) {
     console.log(perimeter.toFixed(2));
 }
 
-rectangle(60, 20, 10, 50)
+rectangle(60, 20, 10, 50);

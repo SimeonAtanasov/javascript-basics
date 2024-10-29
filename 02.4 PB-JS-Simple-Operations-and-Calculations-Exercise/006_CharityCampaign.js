@@ -32,4 +32,4 @@ function CharityCampaign(input) {
 
 }
 
-CharityCampaign([20, 8, 14, 30, 16])
+CharityCampaign([20, 8, 14, 30, 16]);

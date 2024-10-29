@@ -6,4 +6,4 @@ function fishTank(a, b, c, d) {
     console.log(`${liters.toFixed(3)}`)
 }
 
-fishTank(85, 75, 47, 17)
+fishTank(85, 75, 47, 17);

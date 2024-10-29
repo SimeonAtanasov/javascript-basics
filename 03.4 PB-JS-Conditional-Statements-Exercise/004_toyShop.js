@@ -51,5 +51,5 @@ function toyShop(excursionPrice, puzzles, speakingDolls, tedyBears, minions, tru
     // Резултатът трябва да се форматира до втория знак след десетичната запетая.
 
 
-toyShop(40.8, 20, 25, 30, 50, 10)
-toyShop(320, 8, 2, 5, 5, 1)
+toyShop(40.8, 20, 25, 30, 50, 10);
+toyShop(320, 8, 2, 5, 5, 1);

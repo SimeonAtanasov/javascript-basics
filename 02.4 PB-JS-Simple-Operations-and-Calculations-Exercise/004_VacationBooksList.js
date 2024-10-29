@@ -8,4 +8,4 @@ function vacationBookList(NumberPages, Pages, Days) {
     console.log(Hours);
 }
 
-vacationBookList(212, 20, 2)
+vacationBookList(212, 20, 2);
