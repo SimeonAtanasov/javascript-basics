@@ -9,7 +9,7 @@ function cleverLily(liliAge, washingMachine, singleToyPrice){
 
     for(let year = 1; year <= liliAge; year++){
 
-        if(year % 2 !== 0){ гт6
+        if(year % 2 !== 0){ 
             toysCount++;
         }
         else {
