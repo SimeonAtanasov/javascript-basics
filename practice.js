@@ -1,5 +1,5 @@
-function greetings(name){
-    console.log(`Hello, ${name}!`);
+function concatenateData(firstName, lastName, age, town) {
+    console.log(`You are ${firstName} ${lastName}, a ${age}-years old person from ${town}.`);
 }
 
-greetings(`Simeon`)
+concatenateData('Maria', 'Ivanova', 20, 'Sofia');
