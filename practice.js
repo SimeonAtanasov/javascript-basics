@@ -1,5 +1,6 @@
-function concatenateData(firstName, lastName, age, town) {
-    console.log(`You are ${firstName} ${lastName}, a ${age}-years old person from ${town}.`);
+function squareArea(a) {
+    let area = a * a;
+    console.log(area);
 }
 
-concatenateData('Maria', 'Ivanova', 20, 'Sofia');
+squareArea(5);
