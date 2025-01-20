@@ -1,6 +1,6 @@
-function squareArea(a) {
-    let area = a * a;
-    console.log(area);
+function InchestoCentimeters(a) {
+    let inch = a * 2.54;
+    console.log(inch);
 }
 
-squareArea(5);
+InchestoCentimeters(5);
