@@ -1,6 +1,6 @@
-function InchestoCentimeters(a) {
-    let inch = a * 2.54;
-    console.log(inch);
+function ProjectsCreation(name, hours) {
+    let hoursNeeded = hours * 3
+    console.log(`The architect ${name} will need ${hoursNeeded} hours to complete ${hours} project/s.`);
 }
 
-InchestoCentimeters(5);
+ProjectsCreation('Georgi', 4);
