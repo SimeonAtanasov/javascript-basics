@@ -1,6 +1,6 @@
-function ProjectsCreation(name, hours) {
-    let hoursNeeded = hours * 3
-    console.log(`The architect ${name} will need ${hoursNeeded} hours to complete ${hours} project/s.`);
+function petShop(a, b) {
+    let amount = ((a * 2.5) + (b * 4));
+    console.log(`${amount.toFixed(2)} lv.`)
 }
 
-ProjectsCreation('Georgi', 4);
+petShop(5, 4);
