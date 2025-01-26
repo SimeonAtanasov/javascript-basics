@@ -1,9 +1,9 @@
-function yardGreening(a) {
-    let price = Number((a * 7.61).toFixed(2));
-    let discount = Number((0.18 * price).toFixed(2));
-    let finalPrice = price - discount;
-    console.log(`The final price is: ${finalPrice.toFixed(2)} lv.`);
-    console.log(`The discount is: ${discount.toFixed(2)} lv.`)
+function fishTank(a, b, c, d) {
+    let  fishTankTotal = a * b * c;
+    let litersTotal = fishTankTotal * 0.001;
+    let  percentageFull = d * 0.01;
+    let liters = litersTotal*(1-percentageFull);
+    console.log(`${liters.toFixed(3)}`)
 }
 
-yardGreening(540);
+fishTank(85, 75, 47, 17);
