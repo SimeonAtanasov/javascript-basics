@@ -1,11 +1,7 @@
-function USDtoBGN(usd) {
-    if (isNaN(usd)) {
-        console.log("Please enter a valid Number.");
-        return;
-    }
-    let bgn = Number(usd) * 1.79549;
-    console.log(bgn.toFixed(2));
+function RadiansToDegrees(radian) {
+    radian = Number(radian)
+    let degrees = radian * 180 / Math.PI;
+    console.log(degrees.toFixed(0));
 }
 
-USDtoBGN("22");
-USDtoBGN("invalid");
+RadiansToDegrees(3.1416);
