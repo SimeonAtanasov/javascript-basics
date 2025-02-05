@@ -1,11 +1,16 @@
-function depositCalculator(a, b, c){
-    // 1.	Депозирана сума – реално число в интервала [100.00 … 10000.00]
-    // 2.	Срок на депозита (в месеци) – цяло число в интервала [1…12]
-    // 3.	Годишен лихвен процент – реално число в интервала [0.00 …100.00]
-    let amount = a + (b * ((a * (c * 0.01)/12)));
-    // сума = депозирана сума  + срок на депозита * ((депозирана сума * годишен лихвен процент ) / 12)
-    console.log(amount.toFixed(2))
+function rectangle(x1, y1, x2, y2) {
+    x1 = Number(x1);
+    y1 = Number(y1);
+    x2 = Number(x2);
+    y2 = Number(y2);
+
+    let length = Math.abs(x1 - x2);
+    let width = Math.abs(y1 - y2);
+    let area = length * width;
+    let perimeter = length * 2 + width * 2;
+
+    console.log(area.toFixed(2));
+    console.log(perimeter.toFixed(2));
 }
 
-depositCalculator(200, 3, 5.7);
-
+rectangle(60, 20, 10, 50);
