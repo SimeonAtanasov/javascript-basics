@@ -1,16 +1,19 @@
-function rectangle(x1, y1, x2, y2) {
-    x1 = Number(x1);
-    y1 = Number(y1);
-    x2 = Number(x2);
-    y2 = Number(y2);
-
-    let length = Math.abs(x1 - x2);
-    let width = Math.abs(y1 - y2);
-    let area = length * width;
-    let perimeter = length * 2 + width * 2;
-
-    console.log(area.toFixed(2));
-    console.log(perimeter.toFixed(2));
+function TailoringWorkshop(countTable, LengthTable, widthTable) {
+    let areaTableCloth = countTable * (LengthTable + (2 * 0.30))*(widthTable + (2 * 0.30))
+    let kareta = countTable * (LengthTable/2)*(LengthTable/2)
+    let priceUSD = areaTableCloth * 7 + kareta * 9;
+    let priceBGN = priceUSD * 1.85;
+    console.log(`${priceUSD.toFixed(2)} USD`);
+    console.log(`${priceBGN.toFixed(2)} BGN`)
 }
 
-rectangle(60, 20, 10, 50);
+TailoringWorkshop(5, 1.00, 0.50);function TailoringWorkshop(countTable, LengthTable, widthTable) {
+    let areaTableCloth = countTable * (LengthTable + (2 * 0.30))*(widthTable + (2 * 0.30))
+    let kareta = countTable * (LengthTable/2)*(LengthTable/2)
+    let priceUSD = areaTableCloth * 7 + kareta * 9;
+    let priceBGN = priceUSD * 1.85;
+    console.log(`${priceUSD.toFixed(2)} USD`);
+    console.log(`${priceBGN.toFixed(2)} BGN`)
+}
+
+TailoringWorkshop(5, 1.00, 0.50);
