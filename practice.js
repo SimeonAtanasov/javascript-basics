@@ -1,24 +1,16 @@
-function dancehall(input) {
-    let index = 0;
-    let L = Number(input[index]);
-    index++;
-    let W = Number(input[index]);
-    index++;
-    let A = Number(input[index]);
+function SuppliesforSchool(CountPen, CountMarker, LitersCleaner, PercentageDiscount) { 
+    // •	Пакет химикали - 5.80 лв. 
+    // •	Пакет маркери - 7.20 лв. 
+    // •	Препарат - 1.20 лв (за литър)
+    let bill = ((CountPen * 5.80) + (CountMarker * 7.2) + (LitersCleaner * 1.2)) - (((CountPen * 5.80) + (CountMarker * 7.2) + (LitersCleaner * 1.2)) * (PercentageDiscount*0.01))
 
-    let RoomSize = (L * 100) * (W * 100);
-    let wardrobe = A * 100 * A  * 100;
-    let bench = RoomSize / 10;
-    let freeRoom = RoomSize - wardrobe - bench;
+    //     От конзолата се четат 4 числа:
+    // •	Брой пакети химикали - цяло число в интервала [0...100]
+    // •	Брой пакети маркери - цяло число в интервала [0...100]
+    // •	Литри препарат за почистване на дъска - цяло число в интервала [0…50]
+    // •	Процент намаление - цяло число в интервала [0...100]
 
-    let dancers = Math.floor(freeRoom / (40 + 7000));
-
-
-    // 1.	L – дължина на залата в метри – реално число в интервала  [10.00 … 100.00]
-    // 2.	W – ширина на залата в метри – реално число в интервала  [10.00 … 100.00]
-    // 3.	А – страна на гардероба в метри – реално число в интервала [2.00… 20.00]
-    
-    console.log(dancers);
+    console.log(bill);
 }
 
-dancehall([50,25,2]);
+SuppliesforSchool(2, 3, 4, 25);
