@@ -1,16 +1,35 @@
-function SuppliesforSchool(CountPen, CountMarker, LitersCleaner, PercentageDiscount) { 
-    // •	Пакет химикали - 5.80 лв. 
-    // •	Пакет маркери - 7.20 лв. 
-    // •	Препарат - 1.20 лв (за литър)
-    let bill = ((CountPen * 5.80) + (CountMarker * 7.2) + (LitersCleaner * 1.2)) - (((CountPen * 5.80) + (CountMarker * 7.2) + (LitersCleaner * 1.2)) * (PercentageDiscount*0.01))
+function CharityCampaign(input) {
+    let index = 0;
+    let Days = Number(input[index]);
+    index++;
+    let Bakers = Number(input[index]);
+    index++;
+    let Cakes= Number(input[index]);
+    index++;
+    let Waffles = Number(input[index]);
+    index++;
+    let Pancakes = Number(input[index]);
 
-    //     От конзолата се четат 4 числа:
-    // •	Брой пакети химикали - цяло число в интервала [0...100]
-    // •	Брой пакети маркери - цяло число в интервала [0...100]
-    // •	Литри препарат за почистване на дъска - цяло число в интервала [0…50]
-    // •	Процент намаление - цяло число в интервала [0...100]
+    let CakePrice = 45;
+    let WafflesPrice = 5.80;
+    let PancakesPrice = 3.20;
 
-    console.log(bill);
+    let TotalCakesPrice = Cakes * CakePrice;
+    let TotalWafflesPrice = Waffles * WafflesPrice;
+    let TotalPancakesPrices = Pancakes * PancakesPrice;
+
+    let DayPrice = (TotalCakesPrice + TotalPancakesPrices + TotalWafflesPrice) * Bakers;
+    let Campaign = DayPrice * Days;
+    let Money = Campaign - (1/8 * Campaign);
+
+    console.log(Money.toFixed(2));
+    // 1.	Броят на дните, в които тече кампанията – цяло число в интервала [0 … 365]
+    // 2.	Броят на сладкарите – цяло число в интервала [0 … 1000]
+    // 3.	Броят на тортите – цяло число в интервала [0… 2000]
+    // 4.	Броят на гофретите – цяло число в интервала [0 … 2000]
+    // 5.	Броят на палачинките – цяло число в интервала [0 … 2000]
+    
+
 }
 
-SuppliesforSchool(2, 3, 4, 25);
+CharityCampaign([20, 8, 14, 30, 16]);
