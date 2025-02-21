@@ -1,35 +1,17 @@
-function CharityCampaign(input) {
-    let index = 0;
-    let Days = Number(input[index]);
-    index++;
-    let Bakers = Number(input[index]);
-    index++;
-    let Cakes= Number(input[index]);
-    index++;
-    let Waffles = Number(input[index]);
-    index++;
-    let Pancakes = Number(input[index]);
+function Repainting(naylon, paintliters, razreditel, hours) {
+    // •	Предпазен найлон - 1.50 лв. за кв. метър
+    // •	Боя - 14.50 лв. за литър
+    // •	Разредител за боя - 5.00 лв. за литър
+    let amount = (((naylon + 2) * 1.50) + ((paintliters + (paintliters * 0.1)) * 14.50) + (razreditel * 5) + 0.40);
+    let labourcost =  (0.3 * amount) * hours;
+    totalcost = amount + labourcost;
+    //     Входът се чете от конзолата и съдържа точно 4 реда:
+    // 1.	Необходимо количество найлон (в кв.м.) - цяло число в интервала [1... 100]
+    // 2.	Необходимо количество боя (в литри) - цяло число в интервала [1…100]
+    // 3.	Количество разредител (в литри) - цяло число в интервала [1…30]
+    // 4.	Часовете, за които майсторите ще свършат работата - цяло число в интервала [1…9]
 
-    let CakePrice = 45;
-    let WafflesPrice = 5.80;
-    let PancakesPrice = 3.20;
-
-    let TotalCakesPrice = Cakes * CakePrice;
-    let TotalWafflesPrice = Waffles * WafflesPrice;
-    let TotalPancakesPrices = Pancakes * PancakesPrice;
-
-    let DayPrice = (TotalCakesPrice + TotalPancakesPrices + TotalWafflesPrice) * Bakers;
-    let Campaign = DayPrice * Days;
-    let Money = Campaign - (1/8 * Campaign);
-
-    console.log(Money.toFixed(2));
-    // 1.	Броят на дните, в които тече кампанията – цяло число в интервала [0 … 365]
-    // 2.	Броят на сладкарите – цяло число в интервала [0 … 1000]
-    // 3.	Броят на тортите – цяло число в интервала [0… 2000]
-    // 4.	Броят на гофретите – цяло число в интервала [0 … 2000]
-    // 5.	Броят на палачинките – цяло число в интервала [0 … 2000]
-    
-
+    console.log(totalcost);
 }
 
-CharityCampaign([20, 8, 14, 30, 16]);
+Repainting(10, 11, 4, 8);
