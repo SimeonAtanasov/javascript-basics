@@ -1,17 +1,37 @@
-function Repainting(naylon, paintliters, razreditel, hours) {
-    // •	Предпазен найлон - 1.50 лв. за кв. метър
-    // •	Боя - 14.50 лв. за литър
-    // •	Разредител за боя - 5.00 лв. за литър
-    let amount = (((naylon + 2) * 1.50) + ((paintliters + (paintliters * 0.1)) * 14.50) + (razreditel * 5) + 0.40);
-    let labourcost =  (0.3 * amount) * hours;
-    totalcost = amount + labourcost;
-    //     Входът се чете от конзолата и съдържа точно 4 реда:
-    // 1.	Необходимо количество найлон (в кв.м.) - цяло число в интервала [1... 100]
-    // 2.	Необходимо количество боя (в литри) - цяло число в интервала [1…100]
-    // 3.	Количество разредител (в литри) - цяло число в интервала [1…30]
-    // 4.	Часовете, за които майсторите ще свършат работата - цяло число в интервала [1…9]
+function AlcoholMarket(input) {
+    // 1.	Цена на уискито в лева – реално число в интервала [0.00 … 10000.00]
+    // 2.	Количество на бирата в литри – реално число в интервала [0.00 … 10000.00]
+    // 3.	Количество на виното в литри – реално число в интервала [0.00 … 10000.00]
+    // 4.	Количество на ракията в литри – реално число в интервала [0.00 … 10000.00]
+    // 5.	Количество на уискито в литри – реално число в интервала [0.00 … 10000.00]
+    let index = 0;
+    let WhiskyBGN = Number(input[index]);
+    index++;
+    let BeerLiters = Number(input[index]);
+    index++;
+    let WineLiters = Number(input[index]);
+    index++;
+    let RakiaLiters = Number(input[index]);
+    index++;
+    let WhiskyLiters = Number(input[index]);
+    index++;
 
-    console.log(totalcost);
+
+    // •	цената на ракията е на половина по-ниска от тази на уискито;
+    // •	цената на виното е с 40% по-ниска от цената на ракията;
+    // •	цената на бирата е с 80% по-ниска от цената на ракията.
+    let RakiaPrice = 1/2 * WhiskyBGN;
+    let WinePrice = 0.6 * RakiaPrice;
+    let BeerPrice = 0.2 * RakiaPrice;
+
+    let RakiaTotalPrice = RakiaLiters * RakiaPrice;
+    let WineTotalPrice = WineLiters * WinePrice;
+    let BeerTotalPrice = BeerLiters * BeerPrice;
+    let WhiskyTotalPrice = WhiskyLiters * WhiskyBGN;
+    let TotalPrice = RakiaTotalPrice + WineTotalPrice + BeerTotalPrice + WhiskyTotalPrice;
+
+    console.log(TotalPrice.toFixed(2));
 }
 
-Repainting(10, 11, 4, 8);
+AlcoholMarket([50, 10, 3.5, 6.5, 1]);
+AlcoholMarket([63.44, 3.57, 6.35, 8.15, 2.5]);
