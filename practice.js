@@ -1,37 +1,18 @@
-function AlcoholMarket(input) {
-    // 1.	Цена на уискито в лева – реално число в интервала [0.00 … 10000.00]
-    // 2.	Количество на бирата в литри – реално число в интервала [0.00 … 10000.00]
-    // 3.	Количество на виното в литри – реално число в интервала [0.00 … 10000.00]
-    // 4.	Количество на ракията в литри – реално число в интервала [0.00 … 10000.00]
-    // 5.	Количество на уискито в литри – реално число в интервала [0.00 … 10000.00]
-    let index = 0;
-    let WhiskyBGN = Number(input[index]);
-    index++;
-    let BeerLiters = Number(input[index]);
-    index++;
-    let WineLiters = Number(input[index]);
-    index++;
-    let RakiaLiters = Number(input[index]);
-    index++;
-    let WhiskyLiters = Number(input[index]);
-    index++;
+function BasketballEquipment(price) {
+    // •	Баскетболни кецове – цената им е 40% по-малка от таксата за една година
+    // •	Баскетболен екип – цената му е 20% по-евтина от тази на кецовете
+    // •	Баскетболна топка – цената ѝ е 1 / 4 от цената на баскетболния екип
+    // •	Баскетболни аксесоари – цената им е 1 / 5 от цената на баскетболната топка
+    let shoes = price * 0.6;
+    let equip = shoes * 0.8;
+    let ball = equip / 4;
+    let accessories = ball / 5;
+    let totalPrice = price + shoes + equip + ball + accessories;
+    console.log(totalPrice);
 
+    //     От конзолата се четe 1 ред:
+    // •	Годишната такса за тренировки по баскетбол – цяло число в интервала [0… 9999]
 
-    // •	цената на ракията е на половина по-ниска от тази на уискито;
-    // •	цената на виното е с 40% по-ниска от цената на ракията;
-    // •	цената на бирата е с 80% по-ниска от цената на ракията.
-    let RakiaPrice = 1/2 * WhiskyBGN;
-    let WinePrice = 0.6 * RakiaPrice;
-    let BeerPrice = 0.2 * RakiaPrice;
-
-    let RakiaTotalPrice = RakiaLiters * RakiaPrice;
-    let WineTotalPrice = WineLiters * WinePrice;
-    let BeerTotalPrice = BeerLiters * BeerPrice;
-    let WhiskyTotalPrice = WhiskyLiters * WhiskyBGN;
-    let TotalPrice = RakiaTotalPrice + WineTotalPrice + BeerTotalPrice + WhiskyTotalPrice;
-
-    console.log(TotalPrice.toFixed(2));
 }
 
-AlcoholMarket([50, 10, 3.5, 6.5, 1]);
-AlcoholMarket([63.44, 3.57, 6.35, 8.15, 2.5]);
+BasketballEquipment(365);
