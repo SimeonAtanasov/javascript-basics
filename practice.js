@@ -1,18 +1,15 @@
-function BasketballEquipment(price) {
-    // •	Баскетболни кецове – цената им е 40% по-малка от таксата за една година
-    // •	Баскетболен екип – цената му е 20% по-евтина от тази на кецовете
-    // •	Баскетболна топка – цената ѝ е 1 / 4 от цената на баскетболния екип
-    // •	Баскетболни аксесоари – цената им е 1 / 5 от цената на баскетболната топка
-    let shoes = price * 0.6;
-    let equip = shoes * 0.8;
-    let ball = equip / 4;
-    let accessories = ball / 5;
-    let totalPrice = price + shoes + equip + ball + accessories;
-    console.log(totalPrice);
-
-    //     От конзолата се четe 1 ред:
-    // •	Годишната такса за тренировки по баскетбол – цяло число в интервала [0… 9999]
-
+function FoodDelivery(ChickenMenuCount, FishMenuCount, VegeterianMenuCount) {
+    // •	Пилешко меню –  10.35 лв. 
+    // •	Меню с риба – 12.40 лв. 
+    // •	Вегетарианско меню  – 8.15 лв. 
+    let Menus = ((ChickenMenuCount * 10.35) + (FishMenuCount * 12.40) + (VegeterianMenuCount * 8.15))
+    let Dessert = 0.2 * Menus
+    let TotalDelivery = Menus + Dessert + 2.50;
+    //     От конзолата се четат 3 реда:
+    // •	Брой пилешки менюта – цяло число в интервала [0 … 99]
+    // •	Брой менюта с риба – цяло число в интервала [0 … 99]
+    // •	Брой вегетариански менюта – цяло число в интервала [0 … 99]
+    console.log(TotalDelivery)
 }
 
-BasketballEquipment(365);
+FoodDelivery(2, 4, 3);
