@@ -1,13 +1,11 @@
-function evenOrOdd(number) {
-    if (number % 2 == 0) {
-        console.log("even");
-    }
-    else {
-        console.log("odd");
+function passwordGuess(password) {
+    if (password == "s3cr3t!P@ssw0rd"){
+        console.log("Welcome");
+    }  else {
+        console.log("Wrong password!");
     }
 }
 
-EvenOrOdd([2]);
-EvenOrOdd([3]);
-EvenOrOdd([25]);
-EvenOrOdd([1024]);
+PasswordGuess("qwerty");
+PasswordGuess("s3cr3t!P@ssw0rd");
+PasswordGuess("s3cr3t!p@ss");
