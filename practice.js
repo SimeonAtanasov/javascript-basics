@@ -1,25 +1,26 @@
-function speedInformation(speed){
-    // •	При скорост до 10 (включително) отпечатайте "slow"
-    // •	При скорост над 10 и до 50 (включително) отпечатайте "average" 
-    // •	При скорост над 50 и до 150 (включително) отпечатайте "fast"
-    // •	При скорост над 150 и до 1000 (включително) отпечатайте "ultra fast" 
-    // •	При по-висока скорост отпечатайте "extremely fast"
-    speed = Number(speed);
-    if (speed <= 10) {
-        console.log("slow");
-    } else if (speed > 10 && speed <= 50) {
-        console.log("average");
-    } else if (speed > 50 && speed <= 150) {
-        console.log("fast");
-    } else if (speed > 150 && speed <= 1000) {
-        console.log("ultra fast");
-    } else {
-        console.log("extremely fast")
+function areaOfFigures(input) {
+    let index = 0;
+    let figure = input[index];
+    index++;
+    let value1 = Number(input[index]);
+    index++;
+    let value2 = Number(input[index]);
+    if (figure === "square") {
+        let area = value1*value1;
+        console.log(area.toFixed(3));
+    } else if (figure === "rectangle") {
+        let area = value1*value2;
+        console.log(area.toFixed(3));
+    } else if (figure === "circle") {
+        let area = Math.PI * value1 * value1;
+        console.log(area.toFixed(3));
+    } else if (figure === "triangle") {
+        let area = 1/2*value1*value2;
+        console.log(area.toFixed(3));
     }
 }
 
-speedInformation(8);
-speedInformation(49.5);
-speedInformation(126);
-speedInformation(160);
-speedInformation(3500);
+areaOfFigures(["square", 5]);
+areaOfFigures(["rectangle", 7, 2.5]);
+areaOfFigures(["circle", 6]);
+areaOfFigures(["triangle", 4.5, 20]);
