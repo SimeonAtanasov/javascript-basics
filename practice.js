@@ -1,21 +1,19 @@
 function areaOfFigures(input) {
-    let index = 0;
-    let figure = input[index];
-    index++;
-    let value1 = Number(input[index]);
-    index++;
-    let value2 = Number(input[index]);
+    let figure = input[0];
+    let value1 = Number(input[1]);
+    let value2 = input.length > 2 ? Number(input[2]) : 0;  // Use value2 only if it’s provided
+
     if (figure === "square") {
-        let area = value1*value1;
+        let area = value1 * value1;
         console.log(area.toFixed(3));
     } else if (figure === "rectangle") {
-        let area = value1*value2;
+        let area = value1 * value2;
         console.log(area.toFixed(3));
     } else if (figure === "circle") {
         let area = Math.PI * value1 * value1;
         console.log(area.toFixed(3));
     } else if (figure === "triangle") {
-        let area = 1/2*value1*value2;
+        let area = 0.5 * value1 * value2;
         console.log(area.toFixed(3));
     }
 }
