@@ -1,24 +1,38 @@
-function areaOfFigures(input) {
-    let figure = input[0];
-    let value1 = Number(input[1]);
-    let value2 = input.length > 2 ? Number(input[2]) : 0;  // Use value2 only if it’s provided
-
-    if (figure === "square") {
-        let area = value1 * value1;
-        console.log(area.toFixed(3));
-    } else if (figure === "rectangle") {
-        let area = value1 * value2;
-        console.log(area.toFixed(3));
-    } else if (figure === "circle") {
-        let area = Math.PI * value1 * value1;
-        console.log(area.toFixed(3));
-    } else if (figure === "triangle") {
-        let area = 0.5 * value1 * value2;
-        console.log(area.toFixed(3));
+function dayOfWeek(num) {
+    let number = Number(num);
+    switch (number)  {
+        case 1:
+            console.log("Monday");
+            break;
+        case 2:
+            console.log("Tuesday");
+            break;
+        case 3:
+            console.log("Wednesday");
+            break;
+        case 4:
+            console.log("Thursday");
+            break;
+        case 5:
+            console.log("Friday");
+            break;
+        case 6:
+            console.log("Saturday");
+            break;
+        case 7:
+            console.log("Sunday");
+            break;
+        default:
+            console.log("Error");
+            break;
     }
 }
 
-areaOfFigures(["square", 5]);
-areaOfFigures(["rectangle", 7, 2.5]);
-areaOfFigures(["circle", 6]);
-areaOfFigures(["triangle", 4.5, 20]);
+dayOfWeek(1);
+dayOfWeek(2);
+dayOfWeek(3);
+dayOfWeek(4);
+dayOfWeek(5);
+dayOfWeek(6);
+dayOfWeek(7);
+dayOfWeek(8);
