@@ -1,38 +1,19 @@
-function dayOfWeek(num) {
-    let number = Number(num);
-    switch (number)  {
-        case 1:
-            console.log("Monday");
+function animalType(animal) {
+    switch (animal) {
+        case "dog":
+            console.log("mammal");
             break;
-        case 2:
-            console.log("Tuesday");
-            break;
-        case 3:
-            console.log("Wednesday");
-            break;
-        case 4:
-            console.log("Thursday");
-            break;
-        case 5:
-            console.log("Friday");
-            break;
-        case 6:
-            console.log("Saturday");
-            break;
-        case 7:
-            console.log("Sunday");
+        case "crocodile":
+        case "tortoise":
+        case "snake":
+            console.log("reptile");
             break;
         default:
-            console.log("Error");
+            console.log("unknown");
             break;
     }
 }
 
-dayOfWeek(1);
-dayOfWeek(2);
-dayOfWeek(3);
-dayOfWeek(4);
-dayOfWeek(5);
-dayOfWeek(6);
-dayOfWeek(7);
-dayOfWeek(8);
+animalType("dog");
+animalType("snake");
+animalType("cat");
