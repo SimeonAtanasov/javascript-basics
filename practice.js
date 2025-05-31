@@ -1,10 +1,14 @@
-function numberInRange(num) {
-    let number = Number(num);
-    if (num >= -100 && num <= 100 && num != 0) {
-        console.log("Yes");
+function fruitOrVegetable(input) {
+    if (input == "banana" || input == "apple" || input == "kiwi" || input == "cherry" || input == "lemon" || input == "grapes") {
+        console.log("fruit");
+    } else if (input == "tomato" || input == "cucumber" || input == "pepper" || input == "carrot") {
+        console.log("vegetable");
     } else {
-        console.log("No")
+        console.log("unknown");
     }
 }
 
-numberInRange("-25", "0", "25");
+fruitOrVegetable("banana");
+fruitOrVegetable("apple");
+fruitOrVegetable("tomato");
+fruitOrVegetable("unknown");
