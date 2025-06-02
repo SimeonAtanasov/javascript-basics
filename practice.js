@@ -1,14 +1,9 @@
-function fruitOrVegetable(input) {
-    if (input == "banana" || input == "apple" || input == "kiwi" || input == "cherry" || input == "lemon" || input == "grapes") {
-        console.log("fruit");
-    } else if (input == "tomato" || input == "cucumber" || input == "pepper" || input == "carrot") {
-        console.log("vegetable");
-    } else {
-        console.log("unknown");
+function ExcellentResult(input) {
+    let index = 0;
+    let grade = Number(input[index]);
+    if (grade >=5.50) {
+        console.log('Excellent!');
     }
 }
 
-fruitOrVegetable("banana");
-fruitOrVegetable("apple");
-fruitOrVegetable("tomato");
-fruitOrVegetable("unknown");
+ExcellentResult([5.50]);
