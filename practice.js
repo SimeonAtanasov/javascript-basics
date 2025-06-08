@@ -1,9 +1,21 @@
-function ExcellentResult(input) {
+function GreaterNumber(input) {
     let index = 0;
-    let grade = Number(input[index]);
-    if (grade >=5.50) {
-        console.log('Excellent!');
+
+    let numOne = Number(input[index]);
+    index ++;
+    let numTwo = Number(input[index]);
+
+    if (numOne > numTwo){
+        console.log(numOne);
     }
+    else {
+        console.log(numTwo);
+    }
+
 }
 
-ExcellentResult([5.50]);
+GreaterNumber([5, 3]);
+GreaterNumber([3, 5]);
+GreaterNumber([10, 10]);
+GreaterNumber([-5, 5]);
+
